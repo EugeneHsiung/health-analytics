@@ -41,20 +41,20 @@ patient_data = {
 
 
 def oxygensaturationchecker(oxygen_saturation, heart_rate): 
-    if (oxygen_saturation >= 95 and oxygen_saturation <=100) and (heart_rate >=60 and heart_rate <100):
-        result = 'normal'
+    if oxygen_saturation > 100 and heart_rate >100:
+        result = 'above normal'
     if oxygen_saturation < 95 and heart_rate <60: 
         result = 'below normal'
     else:
-        result = 'above normal'
+        result = 'normal'
     return result
 
 def oxygenationstatus(oxygen_saturation):
     if oxygen_saturation > 100 and oxygen_saturation <120:
         show = 'hyperxia' 
-    if oxygen_saturation >=60 and oxygen_saturation <94:
+    if oxygen_saturation >0 and oxygen_saturation <94:
         show= 'hypoxia'
-    if oxygen_saturation >94 and oxygen_saturation <=100:    
+    else:     
         show= 'normal oxygenation'    
     return show
 
@@ -71,3 +71,4 @@ def heart_rate_status(heart_rate_levels):
 #example: 
 print('hello,', name,'.' , 'Your result is', oxygensaturationchecker(oxygen_saturation, heart_rate), 'with a SPO2 of', oxygen_saturation, '%.', 'you have', oxygenationstatus (oxygen_saturation) )
 print('your heart rate is', heart_rate, 'indicating', heart_rate_status (heart_rate))
+
