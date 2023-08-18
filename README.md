@@ -104,12 +104,14 @@ print('your heart rate is', heart_rate, 'indicating', heart_rate_status (heart_r
 ```
 This is the print statement for both the o2 saturation checker, oxygenation status, and heart rate status.  
 
-Example: 
+#Example: 
 
+```
 put in your current oxygen_saturation: 98
 put in your heart rate: 90
 enter Your Name: John
 hello, John . Your result is above normal with a SPO2 of 98 %. you have normal oxygenation
 your heart rate is 90 indicating normal heart rate
+```
 
 
