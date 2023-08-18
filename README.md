@@ -62,12 +62,12 @@ This is a nested dictionary. It presented what the patient name is and what thei
 
 ```
 def oxygensaturationchecker(oxygen_saturation, heart_rate): 
-    if (oxygen_saturation >= 95 and oxygen_saturation <=100) and (heart_rate >=60 and heart_rate <100):
-        result = 'normal'
+    if oxygen_saturation > 100 and heart_rate >100:
+        result = 'above normal'
     if oxygen_saturation < 95 and heart_rate <60: 
         result = 'below normal'
     else:
-        result = 'above normal'
+        result = 'normal'
     return result
 ```
 This is the function to check if you are normal, below normal, or above normal based on the O2 sat level and heart rate
@@ -75,10 +75,10 @@ This is the function to check if you are normal, below normal, or above normal b
 ```
 def oxygenationstatus(oxygen_saturation):
     if oxygen_saturation > 100 and oxygen_saturation <120:
-        show = 'hyperxia'
-    if oxygen_saturation >=60 and oxygen_saturation <94:
+        show = 'hyperxia' 
+    if oxygen_saturation >0 and oxygen_saturation <94:
         show= 'hypoxia'
-    if oxygen_saturation >94 and oxygen_saturation <=100:    
+    else:     
         show= 'normal oxygenation'    
     return show
 ```
@@ -93,7 +93,7 @@ def heart_rate_status(heart_rate_levels):
         you_are= 'bradycardia'
     if heart_rate_levels >=60 and heart_rate_levels <=100: 
         you_are= 'normal heart rate'    
-    return you_are
+    return you_are 
 ```
 This is the function to categorize based on the level of heart rate.  
 
@@ -107,11 +107,11 @@ This is the print statement for both the o2 saturation checker, oxygenation stat
 # Example
 
 ```
-put in your current oxygen_saturation: 98
-put in your heart rate: 90
+put in your current oxygen_saturation: 50
+put in your heart rate: 50
 enter Your Name: John
-hello, John . Your result is above normal with a SPO2 of 98 %. you have normal oxygenation
-your heart rate is 90 indicating normal heart rate
+hello, John . Your result is below normal with a SPO2 of 50 %. you have hypoxia
+your heart rate is 50 indicating bradycardia
 ```
 
 
